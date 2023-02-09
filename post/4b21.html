@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>CSS跟学笔记 | Ra-Liz's Blog</title><meta name="author" content="Ra-liz"><meta name="copyright" content="Ra-liz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="CSS这是我参与「第五届青训营 」笔记创作活动的第2天，最近和家人交流我未来发展的问题时遇到很多很多问题，我想这应该是一场小小的历练以及对自己性格问题的修正吧。眼下我也只想努力跟着青训学下这一个月，试试自己有多大能耐了。废话不多说！开始看视频记笔记！ 一、本堂课重点内容： 了解CSS（是什么、如何使用、如何工作、一些重要属性键值、如何调试） 深入了解CSS（哪条规则生效、选择器特异度、CSS求值过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS跟学笔记">
+<meta property="og:url" content="https://ra-liz.github.io/post/4b21.html">
+<meta property="og:site_name" content="Ra-Liz&#39;s Blog">
+<meta property="og:description" content="CSS这是我参与「第五届青训营 」笔记创作活动的第2天，最近和家人交流我未来发展的问题时遇到很多很多问题，我想这应该是一场小小的历练以及对自己性格问题的修正吧。眼下我也只想努力跟着青训学下这一个月，试试自己有多大能耐了。废话不多说！开始看视频记笔记！ 一、本堂课重点内容： 了解CSS（是什么、如何使用、如何工作、一些重要属性键值、如何调试） 深入了解CSS（哪条规则生效、选择器特异度、CSS求值过">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-02-09T02:57:02.000Z">
+<meta property="article:modified_time" content="2023-02-09T03:18:02.633Z">
+<meta property="article:author" content="Ra-liz">
+<meta property="article:tag" content="青训营">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://ra-liz.github.io/post/4b21.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CSS跟学笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-09 11:18:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Ra-Liz's Blog"><span class="site-name">Ra-Liz's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">CSS跟学笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-09T02:57:02.000Z" title="发表于 2023-02-09 10:57:02">2023-02-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-02-09T03:18:02.633Z" title="更新于 2023-02-09 11:18:02">2023-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%92%E8%AE%AD%E7%AC%94%E8%AE%B0/">青训笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CSS跟学笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p>这是我参与「第五届青训营 」笔记创作活动的第2天，最近和家人交流我未来发展的问题时遇到很多很多问题，我想这应该是一场小小的历练以及对自己性格问题的修正吧。眼下我也只想努力跟着青训学下这一个月，试试自己有多大能耐了。废话不多说！开始看视频记笔记！</p>
+<h2 id="一、本堂课重点内容："><a href="#一、本堂课重点内容：" class="headerlink" title="一、本堂课重点内容："></a><strong>一、本堂课重点内容：</strong></h2><ul>
+<li>了解CSS（是什么、如何使用、如何工作、一些重要属性键值、如何调试）</li>
+<li>深入了解CSS（哪条规则生效、选择器特异度、CSS求值过程、CSS继承、布局、块级与行级）</li>
+</ul>
+<h2 id="二、详细知识点介绍："><a href="#二、详细知识点介绍：" class="headerlink" title="二、详细知识点介绍："></a><strong>二、详细知识点介绍：</strong></h2><h3 id="走进前端技术栈-CSS"><a href="#走进前端技术栈-CSS" class="headerlink" title="走进前端技术栈-CSS"></a>走进前端技术栈-CSS</h3><h4 id="什么是CSS"><a href="#什么是CSS" class="headerlink" title="什么是CSS"></a>什么是CSS</h4><ul>
+<li>Cascading Style Sheets</li>
+<li>用来定义页面元素的样式（字体、位置、动画效果等）</li>
+</ul>
+<h4 id="CSS组成"><a href="#CSS组成" class="headerlink" title="CSS组成"></a>CSS组成</h4><ul>
+<li>选择器Selector</li>
+<li>属性Property</li>
+<li>属性值Value</li>
+<li>声明Declaration  🌰： <code>selector &#123;   property: value;   （声明语句） &#125;</code></li>
+</ul>
+<h4 id="CSS使用"><a href="#CSS使用" class="headerlink" title="CSS使用"></a>CSS使用</h4><p>内联、嵌入、外链 <img src="E:\Study\各种笔记\图片存储\d1e76c53d39b49359f11c1cd8413a114tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="carbon (1).png"></p>
+<h4 id="CSS的工作"><a href="#CSS的工作" class="headerlink" title="CSS的工作"></a>CSS的工作</h4><p><img src="E:\Study\各种笔记\图片存储\ffb59623c8e147388651bf0ca92b8cf1tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h5 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h5><p>找出页面中的元素，以便给他们设置样式。</p>
+<p>使用多种方式选择元素：按照标签名、类名或id，按照属性，按照DOM树中的位置</p>
+<h6 id="选择器类型"><a href="#选择器类型" class="headerlink" title="选择器类型"></a>选择器类型</h6><ul>
+<li>通配选择器 🌰:<code>* &#123;color:red; font-size: 20px&#125;</code></li>
+<li>标签选择器</li>
+<li>id选择器</li>
+<li>类选择器（可出现多次，常用）</li>
+<li>属性选择器</li>
+</ul>
+<p>属性🌰:<code>&lt;input value=&quot;haha&quot; disabled&gt;</code> <code>&lt;style&gt;[disabled] &#123;background: #eee;&#125;&lt;/style&gt;</code></p>
+<p>带值属性🌰:<code>&lt;input type=&quot;passworld&quot;&gt;</code> <code>&lt;style&gt;input[type=&quot;passworld&quot;] &#123;color: red;&#125;&lt;/style&gt;</code></p>
+<p>符合条件值属性🌰:<code>&lt;a href=&quot;#top&quot;回到顶部&gt;&lt;/a&gt;</code> <code>&lt;style&gt;a[href^=&quot;#&quot;] &#123;color: red;&#125;&lt;/style&gt;</code></p>
+<ul>
+<li>伪类（pseudo-classes）——不基于标签和属性定位元素</li>
+</ul>
+<p>状态性伪类🌰 <img src="E:\Study\各种笔记\图片存储\a0d8d28010cb4eb3b0cd8354da7bd44btplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="carbon.png"> 结构性伪类🌰 （直接组合） <img src="E:\Study\各种笔记\图片存储\c9e032f56c6d4a87b403bcb0795ce810tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="carbon (2).png"> 其他类型组合（Combinators）： <img src="E:\Study\各种笔记\图片存储\9242e7adfce045ddb3cb99da4df32e3btplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h6 id="选择器组"><a href="#选择器组" class="headerlink" title="选择器组"></a>选择器组</h6><p>🌰：<code>body, h1, h2 &#123;margin: 0; padding: 0;&#125;</code></p>
+<h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h4><h5 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h5><ul>
+<li>rgb(值，值，值)</li>
+<li>#8fac87(00-ff值)</li>
+</ul>
+<h5 id="HSL——Hue色相-Saturation饱和度-Lightness亮度"><a href="#HSL——Hue色相-Saturation饱和度-Lightness亮度" class="headerlink" title="HSL——Hue色相 Saturation饱和度 Lightness亮度"></a>HSL——Hue色相 Saturation饱和度 Lightness亮度</h5><ul>
+<li>hsl(0-360, 100%, 100%)</li>
+</ul>
+<h5 id="一些颜色名"><a href="#一些颜色名" class="headerlink" title="一些颜色名"></a>一些颜色名</h5><p><img src="E:\Study\各种笔记\图片存储\5f96506520454fdab0d5de64b9fba710tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h5 id="alpha透明度"><a href="#alpha透明度" class="headerlink" title="alpha透明度"></a>alpha透明度</h5><ul>
+<li>rgba(值，值，值，0-1值)</li>
+<li>#ff000078(0-1转化成0-255)</li>
+<li>hsla(同上，0透明 1不透明)</li>
+</ul>
+<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><h5 id="字体族"><a href="#字体族" class="headerlink" title="字体族"></a>字体族</h5><p>font-family  🌰:<code>font-family:Optima,Georgia，Serif;</code></p>
+<h6 id="经常放多个字体的原因"><a href="#经常放多个字体的原因" class="headerlink" title="经常放多个字体的原因"></a>经常放多个字体的原因</h6><p>不同客户使用的设备支持拥有和支持的字体不一样，有哪个用哪个。</p>
+<h6 id="通用字体族"><a href="#通用字体族" class="headerlink" title="通用字体族"></a>通用字体族</h6><p><img src="E:\Study\各种笔记\图片存储\153b4cc775154c8293a6941378fbbf47tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h6 id="使用Web-Fonts"><a href="#使用Web-Fonts" class="headerlink" title="使用Web Fonts"></a>使用Web Fonts</h6><p><img src="E:\Study\各种笔记\图片存储\857cca066ba74919a444af96cc60cc0dtplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="carbon (3).png"></p>
+<h6 id="字体裁切"><a href="#字体裁切" class="headerlink" title="字体裁切"></a>字体裁切</h6><p>适当裁切字体，保证存储合适大小</p>
+<h5 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h5><p>font-size(px,em,%)</p>
+<h5 id="字体效果"><a href="#字体效果" class="headerlink" title="字体效果"></a>字体效果</h5><p>font-style(normal,italic斜体)</p>
+<h5 id="字体粗细-字重"><a href="#字体粗细-字重" class="headerlink" title="字体粗细/字重"></a>字体粗细/字重</h5><p>font-weight(100-900,其中400:normal，700:bold)</p>
+<h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><ul>
+<li>字体后面一定要添加一个字体族，以防万一！！</li>
+<li>英文字体尽量写在中文字体前面</li>
+<li>字重与字体密切相关</li>
+</ul>
+<h4 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h4><h5 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h5><p>line-height(1.6 在自身字体大小的倍数)</p>
+<h5 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h5><p>text-align(right,left,center,justify)</p>
+<h5 id="间距"><a href="#间距" class="headerlink" title="间距"></a>间距</h5><p>spacing 属性类型：</p>
+<ul>
+<li>letter-spacing：字间距</li>
+<li>word-spacing：单词间距</li>
+</ul>
+<h5 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h5><p>text-indent(px)</p>
+<h5 id="文段格式"><a href="#文段格式" class="headerlink" title="文段格式"></a>文段格式</h5><p>text-decoration(none,underline,line-through,overline)</p>
+<h5 id="空白符处理"><a href="#空白符处理" class="headerlink" title="空白符处理"></a>空白符处理</h5><p>white-space 属性值：</p>
+<ul>
+<li>normal：默认，空白会被浏览器忽略</li>
+<li>nowrap：文本不换行，会在同一行继续，直到</li>
+<li>pre：空白保留，类似&lt;pre标签</li>
+<li>pre-wrap：保留空白符序列，但是正常地进行换行</li>
+<li>pre-line：合并空白符序列，但是保留换行符</li>
+<li>inherit：规定应该从父元素继承white-space属性值</li>
+</ul>
+<h4 id="调试CSS"><a href="#调试CSS" class="headerlink" title="调试CSS"></a>调试CSS</h4><p>【检查】页面</p>
+<h3 id="深入CSS（一）"><a href="#深入CSS（一）" class="headerlink" title="深入CSS（一）"></a>深入CSS（一）</h3><h4 id="选择器样式优先级"><a href="#选择器样式优先级" class="headerlink" title="选择器样式优先级"></a>选择器样式优先级</h4><p>Inline style（内联样式） &gt; Internal style sheet（内部样式） &gt; External style sheet（外部样式）&gt;！important &gt; 内联样式 &gt; ID 选择器 &gt; 类选择器 = 属性选择器 = 伪类选择器 &gt; 标签选择器 = 伪元素选择器 &gt; 通配选择器</p>
+<p>🌰:</p>
+<ul>
+<li><p>内联样式：写在标签属性style的样式，如 </p>
+</li>
+<li><p>ID选择器，如#id{…}</p>
+</li>
+<li><p>类选择器，如 .class{…}</p>
+</li>
+<li><p>属性选择器，如 input[type=”email”]{…}</p>
+</li>
+<li><p>伪类选择器，如a:hover{…}</p>
+</li>
+<li><p>伪元素选择器，如 p::before{…}</p>
+</li>
+<li><p>标签选择器，如 input{…}</p>
+</li>
+<li><p>通配选择器，如 *{…}</p>
+</li>
+</ul>
+<h5 id="选择器的特异度Specificity"><a href="#选择器的特异度Specificity" class="headerlink" title="选择器的特异度Specificity"></a>选择器的特异度Specificity</h5><p>通过比较元素使用选择器类型和数量判断选择器的特异度 <img src="E:\Study\各种笔记\图片存储\1a1585cc77454460a0e6f01e4561c2d0tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h5 id="使用策略"><a href="#使用策略" class="headerlink" title="使用策略"></a>使用策略</h5><h6 id="复用"><a href="#复用" class="headerlink" title="复用"></a>复用</h6><p><img src="E:\Study\各种笔记\图片存储\d57c738809ea4e80b6f0eb2210836eebtplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="carbon (4).png"></p>
+<h6 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h6><p>扩展-CSS属性的继承性分类（光码不看没有用）</p>
+<ul>
+<li>不可继承的：display、margin、border、padding、background、height、min-height、max- height、width、min-width、max-width、overflow、position、left、right、top、 bottom、z-index、float、clear、table-layout、vertical-align、page-break-after、 page-bread-before和unicode-bidi。</li>
+<li>所有元素可继承：visibility和cursor。</li>
+<li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction。</li>
+<li>块状元素可继承：text-indent和text-align。</li>
+<li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+<li>表格元素可继承：border-collapse。</li>
+</ul>
+<p>显示继承</p>
+<p>把不可继承的变成可继承的，属性值：inherit</p>
+<h6 id="属性的初始值initial"><a href="#属性的初始值initial" class="headerlink" title="属性的初始值initial"></a>属性的初始值initial</h6><h5 id="CSS运算过程"><a href="#CSS运算过程" class="headerlink" title="CSS运算过程"></a>CSS运算过程</h5><p><a href="https://link.juejin.cn/?target=url">cdpn.io/webzhao/deb…</a></p>
+<h4 id="布局Layout"><a href="#布局Layout" class="headerlink" title="布局Layout"></a>布局Layout</h4><p>听累了写累了，整点截图喘口气↓</p>
+<h5 id="常规流"><a href="#常规流" class="headerlink" title="常规流"></a>常规流</h5><p><img src="E:\Study\各种笔记\图片存储\cf9278e3054a44d99ed21ea01eba7b98tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h5 id="属性关系"><a href="#属性关系" class="headerlink" title="属性关系"></a>属性关系</h5><p><img src="E:\Study\各种笔记\图片存储\333c59d17f5f452faccaaa1aa1b5a6f0tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h5 id="border属性"><a href="#border属性" class="headerlink" title="border属性"></a>border属性</h5><p><img src="E:\Study\各种笔记\图片存储\704ddd7446024215b30855f11e66d0d6tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h5 id="padding属性略"><a href="#padding属性略" class="headerlink" title="padding属性略"></a>padding属性略</h5><h5 id="margin属性"><a href="#margin属性" class="headerlink" title="margin属性"></a>margin属性</h5><p><code>margin:auto</code>:水平居中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin collapse</span><br></pre></td></tr></table></figure>
+
+<h5 id="box-sizing-border-box非常常用↓"><a href="#box-sizing-border-box非常常用↓" class="headerlink" title="box-sizing:border-box非常常用↓"></a><strong>box-sizing:border-box</strong>非常常用↓</h5><p><img src="E:\Study\各种笔记\图片存储\fab5d2c7790346f889feb6302d2ca664tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<h5 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h5><ul>
+<li>visible</li>
+<li>hidden</li>
+<li>scrool</li>
+</ul>
+<h3 id="深入CSS（二）"><a href="#深入CSS（二）" class="headerlink" title="深入CSS（二）"></a>深入CSS（二）</h3><h4 id="块级和行级"><a href="#块级和行级" class="headerlink" title="块级和行级"></a>块级和行级</h4><p>不行了真的不行了，以后还是得用自己的工具写文档 <img src="E:\Study\各种笔记\图片存储\4c7176dfa536467a8d6e00c372ad54c5tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<p><img src="E:\Study\各种笔记\图片存储\fed95705bec44c96b9169f94e029c127tplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"></p>
+<p><img src="E:\Study\各种笔记\图片存储\6853bb5819aa4e64ae3e9c3c0291c24dtplv-k3u1fbpfcp-zoom-in-crop-mark3024000.webp" alt="image.png"> 现在是夜晚十点半，我的脑子转不动了，明天继续这里吧</p>
+<h2 id="三、课后个人总结："><a href="#三、课后个人总结：" class="headerlink" title="三、课后个人总结："></a><strong>三、课后个人总结：</strong></h2><p>1.跟着视频顺一遍真的很有用 2.选一款适合自己的写文档的工具很重要，不要图省事 3.写文档是个仔细活，需精进 4.不愧是CSS（脑子真的转不动了不知道怎么总结了，明天早上想好了写评论里）</p>
+<h2 id="四、引用参考："><a href="#四、引用参考：" class="headerlink" title="四、引用参考："></a><strong>四、引用参考：</strong></h2><p><a href="https://link.juejin.cn/?target=https://www.nowcoder.com/questionTerminal/82951db93fec4c6bb1a5a44e649b2bfc">牛客真题1</a></p>
+<p><a href="https://link.juejin.cn/?target=https://www.nowcoder.com/questionTerminal/e441b994986a411bb4872d640b790484">牛客真题2</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ra-liz.github.io">Ra-liz</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ra-liz.github.io/post/4b21.html">https://ra-liz.github.io/post/4b21.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ra-liz.github.io" target="_blank">Ra-Liz's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%92%E8%AE%AD%E8%90%A5/">青训营</a><a class="post-meta__tags" href="/tags/CSS/">CSS</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/a33a.html" title="JS跟学笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JS跟学笔记</div></div></a></div><div class="next-post pull-right"><a href="/post/f274.html" title="HTML跟学笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">HTML跟学笔记</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/f274.html" title="HTML跟学笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-09</div><div class="title">HTML跟学笔记</div></div></a></div><div><a href="/post/a33a.html" title="JS跟学笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-09</div><div class="title">JS跟学笔记</div></div></a></div><div><a href="/post/bd24.html" title="TS跟学笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-09</div><div class="title">TS跟学笔记</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ra-liz</div><div class="author-info__description">实力至上</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS"><span class="toc-number">1.</span> <span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%9C%AC%E5%A0%82%E8%AF%BE%E9%87%8D%E7%82%B9%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">一、本堂课重点内容：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%A6%E7%BB%86%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">二、详细知识点介绍：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B0%E8%BF%9B%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%A0%88-CSS"><span class="toc-number">1.2.1.</span> <span class="toc-text">走进前端技术栈-CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFCSS"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">什么是CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS%E7%BB%84%E6%88%90"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">CSS组成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">CSS使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">CSS的工作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.1.4.1.</span> <span class="toc-text">选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.4.1.1.</span> <span class="toc-text">选择器类型</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%BB%84"><span class="toc-number">1.2.1.4.1.2.</span> <span class="toc-text">选择器组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2"><span class="toc-number">1.2.1.5.</span> <span class="toc-text">颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#RGB"><span class="toc-number">1.2.1.5.1.</span> <span class="toc-text">RGB</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HSL%E2%80%94%E2%80%94Hue%E8%89%B2%E7%9B%B8-Saturation%E9%A5%B1%E5%92%8C%E5%BA%A6-Lightness%E4%BA%AE%E5%BA%A6"><span class="toc-number">1.2.1.5.2.</span> <span class="toc-text">HSL——Hue色相 Saturation饱和度 Lightness亮度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E9%A2%9C%E8%89%B2%E5%90%8D"><span class="toc-number">1.2.1.5.3.</span> <span class="toc-text">一些颜色名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#alpha%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">1.2.1.5.4.</span> <span class="toc-text">alpha透明度</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-number">1.2.1.6.</span> <span class="toc-text">字体</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E6%97%8F"><span class="toc-number">1.2.1.6.1.</span> <span class="toc-text">字体族</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%BB%8F%E5%B8%B8%E6%94%BE%E5%A4%9A%E4%B8%AA%E5%AD%97%E4%BD%93%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.2.1.6.1.1.</span> <span class="toc-text">经常放多个字体的原因</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E5%AD%97%E4%BD%93%E6%97%8F"><span class="toc-number">1.2.1.6.1.2.</span> <span class="toc-text">通用字体族</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Web-Fonts"><span class="toc-number">1.2.1.6.1.3.</span> <span class="toc-text">使用Web Fonts</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E8%A3%81%E5%88%87"><span class="toc-number">1.2.1.6.1.4.</span> <span class="toc-text">字体裁切</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.2.1.6.2.</span> <span class="toc-text">字体大小</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E6%95%88%E6%9E%9C"><span class="toc-number">1.2.1.6.3.</span> <span class="toc-text">字体效果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86-%E5%AD%97%E9%87%8D"><span class="toc-number">1.2.1.6.4.</span> <span class="toc-text">字体粗细&#x2F;字重</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.2.1.6.5.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E7%89%88"><span class="toc-number">1.2.1.7.</span> <span class="toc-text">排版</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A1%8C%E9%AB%98"><span class="toc-number">1.2.1.7.1.</span> <span class="toc-text">行高</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E9%BD%90"><span class="toc-number">1.2.1.7.2.</span> <span class="toc-text">对齐</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%97%B4%E8%B7%9D"><span class="toc-number">1.2.1.7.3.</span> <span class="toc-text">间距</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%A9%E8%BF%9B"><span class="toc-number">1.2.1.7.4.</span> <span class="toc-text">缩进</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E6%AE%B5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.2.1.7.5.</span> <span class="toc-text">文段格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A9%BA%E7%99%BD%E7%AC%A6%E5%A4%84%E7%90%86"><span class="toc-number">1.2.1.7.6.</span> <span class="toc-text">空白符处理</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B0%83%E8%AF%95CSS"><span class="toc-number">1.2.1.8.</span> <span class="toc-text">调试CSS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5CSS%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-number">1.2.2.</span> <span class="toc-text">深入CSS（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">选择器样式优先级</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E7%89%B9%E5%BC%82%E5%BA%A6Specificity"><span class="toc-number">1.2.2.1.1.</span> <span class="toc-text">选择器的特异度Specificity</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5"><span class="toc-number">1.2.2.1.2.</span> <span class="toc-text">使用策略</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%A4%8D%E7%94%A8"><span class="toc-number">1.2.2.1.2.1.</span> <span class="toc-text">复用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">1.2.2.1.2.2.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%9D%E5%A7%8B%E5%80%BCinitial"><span class="toc-number">1.2.2.1.2.3.</span> <span class="toc-text">属性的初始值initial</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CSS%E8%BF%90%E7%AE%97%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.2.1.3.</span> <span class="toc-text">CSS运算过程</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%83%E5%B1%80Layout"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">布局Layout</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%B8%E8%A7%84%E6%B5%81"><span class="toc-number">1.2.2.2.1.</span> <span class="toc-text">常规流</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E5%85%B3%E7%B3%BB"><span class="toc-number">1.2.2.2.2.</span> <span class="toc-text">属性关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#border%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.2.2.3.</span> <span class="toc-text">border属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#padding%E5%B1%9E%E6%80%A7%E7%95%A5"><span class="toc-number">1.2.2.2.4.</span> <span class="toc-text">padding属性略</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#margin%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.2.2.5.</span> <span class="toc-text">margin属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#box-sizing-border-box%E9%9D%9E%E5%B8%B8%E5%B8%B8%E7%94%A8%E2%86%93"><span class="toc-number">1.2.2.2.6.</span> <span class="toc-text">box-sizing:border-box非常常用↓</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#overflow"><span class="toc-number">1.2.2.2.7.</span> <span class="toc-text">overflow</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5CSS%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-number">1.2.3.</span> <span class="toc-text">深入CSS（二）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%97%E7%BA%A7%E5%92%8C%E8%A1%8C%E7%BA%A7"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">块级和行级</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%BE%E5%90%8E%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">三、课后个人总结：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">四、引用参考：</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/bd24.html" title="TS跟学笔记">TS跟学笔记</a><time datetime="2023-02-09T02:57:20.000Z" title="发表于 2023-02-09 10:57:20">2023-02-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/a33a.html" title="JS跟学笔记">JS跟学笔记</a><time datetime="2023-02-09T02:57:12.000Z" title="发表于 2023-02-09 10:57:12">2023-02-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/4b21.html" title="CSS跟学笔记">CSS跟学笔记</a><time datetime="2023-02-09T02:57:02.000Z" title="发表于 2023-02-09 10:57:02">2023-02-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/f274.html" title="HTML跟学笔记">HTML跟学笔记</a><time datetime="2023-02-09T02:56:53.000Z" title="发表于 2023-02-09 10:56:53">2023-02-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/db5b.html" title="Vite跟学笔记">Vite跟学笔记</a><time datetime="2023-01-31T07:57:07.000Z" title="发表于 2023-01-31 15:57:07">2023-01-31</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Ra-liz</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
