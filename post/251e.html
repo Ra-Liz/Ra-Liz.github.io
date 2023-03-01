@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>SpringBoot学习笔记 | Ra-Liz's Blog</title><meta name="author" content="Ra-liz"><meta name="copyright" content="Ra-liz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Springboot学习大纲1. Java 基础知识在学习 Spring Boot 之前，需要对 Java 编程语言有一定的了解。包括 Java 的面向对象编程、集合框架、异常处理、IO 流、泛型、Lambda 表达式等等。 2. Spring 基础知识Spring 是一个强大的开源框架，它为 Java 开发人员提供了一种开发企业级应用程序的方式。在学习 Spring Boot 之前，需要掌握 S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot学习笔记">
+<meta property="og:url" content="https://ra-liz.github.io/post/251e.html">
+<meta property="og:site_name" content="Ra-Liz&#39;s Blog">
+<meta property="og:description" content="Springboot学习大纲1. Java 基础知识在学习 Spring Boot 之前，需要对 Java 编程语言有一定的了解。包括 Java 的面向对象编程、集合框架、异常处理、IO 流、泛型、Lambda 表达式等等。 2. Spring 基础知识Spring 是一个强大的开源框架，它为 Java 开发人员提供了一种开发企业级应用程序的方式。在学习 Spring Boot 之前，需要掌握 S">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ra-liz.github.io/img/favicon.png">
+<meta property="article:published_time" content="2023-03-01T01:38:21.000Z">
+<meta property="article:modified_time" content="2023-03-01T01:42:22.660Z">
+<meta property="article:author" content="Ra-liz">
+<meta property="article:tag" content="基础">
+<meta property="article:tag" content="后端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ra-liz.github.io/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://ra-liz.github.io/post/251e.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'SpringBoot学习笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-01 09:42:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog-info"><a href="/" title="Ra-Liz's Blog"><span class="site-name">Ra-Liz's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">SpringBoot学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-01T01:38:21.000Z" title="发表于 2023-03-01 09:38:21">2023-03-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-01T01:42:22.660Z" title="更新于 2023-03-01 09:42:22">2023-03-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/SpringBoot/">SpringBoot</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="SpringBoot学习笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Springboot学习大纲"><a href="#Springboot学习大纲" class="headerlink" title="Springboot学习大纲"></a>Springboot学习大纲</h2><h3 id="1-Java-基础知识"><a href="#1-Java-基础知识" class="headerlink" title="1. Java 基础知识"></a>1. Java 基础知识</h3><p>在学习 Spring Boot 之前，需要对 Java 编程语言有一定的了解。包括 Java 的面向对象编程、集合框架、异常处理、IO 流、泛型、Lambda 表达式等等。</p>
+<h3 id="2-Spring-基础知识"><a href="#2-Spring-基础知识" class="headerlink" title="2. Spring 基础知识"></a>2. Spring 基础知识</h3><p>Spring 是一个强大的开源框架，它为 Java 开发人员提供了一种开发企业级应用程序的方式。在学习 Spring Boot 之前，需要掌握 Spring 的基本概念、核心组件（IOC、AOP、MVC等）、配置方式（XML、JavaConfig、Annotation）等。</p>
+<h3 id="3-Spring-Boot-入门"><a href="#3-Spring-Boot-入门" class="headerlink" title="3. Spring Boot 入门"></a>3. Spring Boot 入门</h3><p>学习 Spring Boot 的第一步是了解它的基本概念、优点和用途。包括 Spring Boot 的起源、特点、与传统 Spring 框架的区别等。</p>
+<h3 id="4-Spring-Boot-快速入门"><a href="#4-Spring-Boot-快速入门" class="headerlink" title="4. Spring Boot 快速入门"></a>4. Spring Boot 快速入门</h3><p>学习 Spring Boot 的最好方法是动手实践。可以使用 Spring Initializr 快速创建一个 Spring Boot 项目，并编写一些简单的示例代码。这些示例代码可以涉及常用的 Spring Boot 功能，例如：Web 开发、数据库访问、安全认证、缓存等。</p>
+<h3 id="5-Spring-Boot-基础组件"><a href="#5-Spring-Boot-基础组件" class="headerlink" title="5. Spring Boot 基础组件"></a>5. Spring Boot 基础组件</h3><p>Spring Boot 提供了许多基础组件，包括：</p>
+<ul>
+<li>Spring Boot Starter：用于快速集成常用的依赖库，例如：Spring MVC、JPA、MyBatis、Thymeleaf 等。</li>
+<li>Spring Boot AutoConfigure：自动配置，用于根据应用程序的类路径、环境变量等来配置 Spring 应用程序。</li>
+<li>Spring Boot Actuator：用于监视和管理 Spring Boot 应用程序的端点。</li>
+</ul>
+<h3 id="6-Spring-Boot-Web-开发"><a href="#6-Spring-Boot-Web-开发" class="headerlink" title="6. Spring Boot Web 开发"></a>6. Spring Boot Web 开发</h3><p>Spring Boot 提供了用于构建 Web 应用程序的功能，包括：</p>
+<ul>
+<li>Spring MVC：用于处理 HTTP 请求和响应，支持 RESTful API 和视图解析等。</li>
+<li>Spring WebFlux：响应式 Web 框架，基于 Reactor 和 RxJava。</li>
+<li>Spring Boot Web 安全：用于实现身份验证和授权，包括基于表单、基于 OAuth2 等方式。</li>
+</ul>
+<h3 id="7-Spring-Boot-数据访问"><a href="#7-Spring-Boot-数据访问" class="headerlink" title="7. Spring Boot 数据访问"></a>7. Spring Boot 数据访问</h3><p>Spring Boot 提供了各种方式来访问和管理数据，包括：</p>
+<ul>
+<li>JDBC：Java 数据库连接，用于访问关系型数据库。</li>
+<li>JPA：Java 持久化 API，用于访问关系型数据库。</li>
+<li>MongoDB：文档数据库，用于访问 NoSQL 数据库。</li>
+<li>Redis：内存数据结构存储，用于实现缓存、消息队列等。</li>
+</ul>
+<h3 id="8-Spring-Boot-测试"><a href="#8-Spring-Boot-测试" class="headerlink" title="8. Spring Boot 测试"></a>8. Spring Boot 测试</h3><p>Spring Boot 提供了一系列用于测试的工具和框架，包括：</p>
+<ul>
+<li><p>Spring Boot Test：用于编写集成测试和单元测试。</p>
+</li>
+<li><p>Spring Boot Test Slice：用于编写针对特定层（例如，Web 层或数据访问层）的测试。</p>
+</li>
+<li><p>Mockito：用于模拟对象，以便进行单元测试。</p>
+</li>
+<li><p>TestContainers：用于在测试环境中启动 Docker 容器，以便测试容器化应用程序。</p>
+</li>
+</ul>
+<h3 id="9-Spring-Boot-部署与运维"><a href="#9-Spring-Boot-部署与运维" class="headerlink" title="9. Spring Boot 部署与运维"></a>9. Spring Boot 部署与运维</h3><p>学习 Spring Boot 还需要了解如何部署和运维应用程序。可以掌握以下知识：</p>
+<ul>
+<li>Spring Boot 打包：使用 Maven 或 Gradle 将 Spring Boot 应用程序打包成可执行的 JAR 或 WAR 文件。</li>
+<li>Spring Boot 部署：使用不同的部署方式，例如：传统的服务器部署、Docker 容器化部署、云原生部署等。</li>
+<li>Spring Boot 运维：使用 Spring Boot Actuator 监视应用程序的运行状况、使用 Spring Boot Admin 进行可视化的应用程序管理等。</li>
+</ul>
+<h3 id="10-Spring-Boot-实战项目"><a href="#10-Spring-Boot-实战项目" class="headerlink" title="10. Spring Boot 实战项目"></a>10. Spring Boot 实战项目</h3><p>最后，可以尝试完成一个真实的 Spring Boot 项目，这有助于加深对 Spring Boot 的理解和应用。</p>
+<p>以上是学习 Spring Boot 的一个可靠大纲，可以帮助你系统地掌握 Spring Boot 的各种知识和技能。当然，在实际学习中，还需要不断实践和积累经验。</p>
+<h2 id="课程学习"><a href="#课程学习" class="headerlink" title="课程学习"></a>课程学习</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><p>官网： spring.io</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ra-liz.github.io">Ra-liz</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ra-liz.github.io/post/251e.html">https://ra-liz.github.io/post/251e.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ra-liz.github.io" target="_blank">Ra-Liz's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80/">基础</a><a class="post-meta__tags" href="/tags/%E5%90%8E%E7%AB%AF/">后端</a></div><div class="post_share"><div class="social-share" data-image="/img/favicon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/8d93.html" title="Vue3的学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Vue3的学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ra-liz</div><div class="author-info__description">食栗至上</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Ra-Liz"><i class="fab fa-github"></i><span>俺的GitHub</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><p align="center">微信号：raliz2333</p> <p align="center">QQ号：2879055132</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Springboot%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2"><span class="toc-number">1.</span> <span class="toc-text">Springboot学习大纲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text">1. Java 基础知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Spring-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.2.</span> <span class="toc-text">2. Spring 基础知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Spring-Boot-%E5%85%A5%E9%97%A8"><span class="toc-number">1.3.</span> <span class="toc-text">3. Spring Boot 入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Spring-Boot-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">1.4.</span> <span class="toc-text">4. Spring Boot 快速入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Spring-Boot-%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">5. Spring Boot 基础组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Spring-Boot-Web-%E5%BC%80%E5%8F%91"><span class="toc-number">1.6.</span> <span class="toc-text">6. Spring Boot Web 开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Spring-Boot-%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE"><span class="toc-number">1.7.</span> <span class="toc-text">7. Spring Boot 数据访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Spring-Boot-%E6%B5%8B%E8%AF%95"><span class="toc-number">1.8.</span> <span class="toc-text">8. Spring Boot 测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Spring-Boot-%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%BF%90%E7%BB%B4"><span class="toc-number">1.9.</span> <span class="toc-text">9. Spring Boot 部署与运维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-Spring-Boot-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.10.</span> <span class="toc-text">10. Spring Boot 实战项目</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.</span> <span class="toc-text">课程学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="toc-number">2.1.</span> <span class="toc-text">配置环境</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/251e.html" title="SpringBoot学习笔记">SpringBoot学习笔记</a><time datetime="2023-03-01T01:38:21.000Z" title="发表于 2023-03-01 09:38:21">2023-03-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/8d93.html" title="Vue3的学习">Vue3的学习</a><time datetime="2023-02-27T10:30:10.000Z" title="发表于 2023-02-27 18:30:10">2023-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/48c2.html" title="Vue2的学习">Vue2的学习</a><time datetime="2023-02-27T10:29:58.000Z" title="发表于 2023-02-27 18:29:58">2023-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/86b8.html" title="Android基础">Android基础</a><time datetime="2023-02-27T01:53:47.000Z" title="发表于 2023-02-27 09:53:47">2023-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/3150.html" title="项目开发-Github工作流">项目开发-Github工作流</a><time datetime="2023-02-18T02:02:55.000Z" title="发表于 2023-02-18 10:02:55">2023-02-18</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Ra-liz</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
