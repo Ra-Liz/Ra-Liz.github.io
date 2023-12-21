@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>nextjs中使用tailwindcss添加自定义字体</title>
+      <link href="/post/cc29.html"/>
+      <url>/post/cc29.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="nextjs中使用tailwindcss添加自定义字体"><a href="#nextjs中使用tailwindcss添加自定义字体" class="headerlink" title="nextjs中使用tailwindcss添加自定义字体"></a>nextjs中使用tailwindcss添加自定义字体</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p><a href="https://tailwindcss.com/docs/font-family#providing-default-font-settings">指路官方文档</a></p><p>项目框架</p><ul><li>next.js</li><li>tailwindcss</li><li>app router</li></ul><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol><li><p>在public目录中添加字体文件（我的是个.TTF文件）</p><p><img src="../images/nextjs%E4%B8%AD%E4%BD%BF%E7%94%A8tailwindcss%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/image-20231221114910144.png" alt="image-20231221114910144"></p></li><li><p>在global.css文件中添加字体</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 自定义字体，注意这里url()中路径已然是public目录下 */</span></span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;lcd-font&quot;</span>;</span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&quot;/DS-DIGIB.TTF&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>在tailwind.config.js中配置字体</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">theme</span>: &#123;</span><br><span class="line">    <span class="attr">extend</span>: &#123;</span><br><span class="line">      <span class="attr">fontFamily</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;sans-serif&#x27;</span>: <span class="string">&#x27;Helvetica, Arial, sans-serif&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;serif&#x27;</span>: <span class="string">&#x27;Georgia, &quot;Times New Roman&quot;, Times, serif&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;monospace&#x27;</span>: <span class="string">&#x27;Courier New, monospace&#x27;</span>,</span><br><span class="line">        <span class="comment">// 👇在这里添加好刚才的字体</span></span><br><span class="line">        <span class="string">&#x27;lcd&#x27;</span>: <span class="string">&quot;lcd-font&quot;</span>, </span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 省略</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 省略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>使用字体</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">&quot;font-lcd&quot;</span>&gt;内容&lt;/div&gt;</span><br></pre></td></tr></table></figure></li></ol><p>椰丝成功了😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 外置脑 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tailwindcss </tag>
+            
+            <tag> nextjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS验证URL的新方法</title>
+      <link href="/post/aad0.html"/>
+      <url>/post/aad0.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="../images/JS%E9%AA%8C%E8%AF%81URL%E7%9A%84%E6%96%B0%E6%96%B9%E6%B3%95/image-20231213145139677.png" alt="image-20231213145139677"></p><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/canParse_static">MDN URL.carParse()</a></p><p><a href="https://www.stefanjudis.com/blog/validate-urls-in-javascript/">文章摘自</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>瀑布流布局Demo</title>
       <link href="/post/20fa.html"/>
       <url>/post/20fa.html</url>
