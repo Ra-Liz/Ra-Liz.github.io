@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Tailwindcss处理背景渐变</title>
+      <link href="/post/5f8d.html"/>
+      <url>/post/5f8d.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Tailwindcss-处理背景渐变"><a href="#Tailwindcss-处理背景渐变" class="headerlink" title="Tailwindcss 处理背景渐变"></a>Tailwindcss 处理背景渐变</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在开发中，我们经常需要使用背景渐变，但是 Tailwindcss 默认并没有提供背景渐变的工具类，所以我们需要自己来实现。</p><h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><ol><li>在<code>tailwind.config.js</code>中添加自定义工具类：</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">theme</span>: &#123;</span><br><span class="line">    <span class="attr">extend</span>: &#123;</span><br><span class="line">      <span class="attr">backgroundImage</span>: &#123;</span><br><span class="line">        <span class="string">&quot;gradient-to-r&quot;</span>: <span class="string">&quot;linear-gradient(to right, var(--tw-gradient-stops))&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">colors</span>: &#123;</span><br><span class="line">      <span class="string">&quot;start-color&quot;</span>: <span class="string">&quot;#FD7A61&quot;</span>,</span><br><span class="line">      <span class="string">&quot;end-color&quot;</span>: <span class="string">&quot;#FF934D&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ol start="2"><li>在需要使用背景渐变的地方，使用<code>bg-gradient</code>工具类：</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bg-gradient-to-r from-start-color to-end-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>nextjs中使用tailwindcss添加自定义字体</title>
       <link href="/post/cc29.html"/>
       <url>/post/cc29.html</url>
