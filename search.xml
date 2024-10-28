@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>打算规范一下博客</title>
+      <link href="/post/7abf.html"/>
+      <url>/post/7abf.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="为什么想重新规范一下博客呢？"><a href="#为什么想重新规范一下博客呢？" class="headerlink" title="为什么想重新规范一下博客呢？"></a>为什么想重新规范一下博客呢？</h2><p>最近业余时间经常会看周刊，机缘巧合下又捕获到了几个不错的文章站点。</p><p>一个站点是<a href="https://juejin.cn/user/3579665587900030/posts">XboxYan大佬的纯CSS实现功能合集</a>，另一个站点是<a href="https://spacexcode.com/">范兄特别简明且优雅的个人博客</a>。</p><p>跟着两位大佬写了不少小功能，而且看完范兄的2023年度总结文章心潮澎湃。</p><p>转眼看看自己的博客，营养价值极低，而且有的太啰嗦了（学生时代写的东西让现在的自己感到一头问号），所以打算把自己的博客翻修一下。</p><p>计划赶不上变化，从这里动态记录盖房子装修过程吧。</p><ol><li>文章的分类和标签整理一下√</li><li>没用的文章得删一下了</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 思考 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用leaflet绘制地图，地图包含站点</title>
       <link href="/post/4922.html"/>
       <url>/post/4922.html</url>
